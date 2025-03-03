@@ -1,0 +1,76 @@
+:root {
+    --main-bg-color: #f5f0e1;
+    --main-fg-color: #fff8e1;
+    --navbar-color: #d2c6a1;
+    --navbar-color-hover: #ffb5a7;
+    --navbar-font-color: #4a4a4a;
+    --text-color: #6f6f6f;
+  }
+
+* {
+    box-sizing: border-box;
+}
+
+.body {
+    margin:0;
+    padding:0;
+    height: 100%;
+    color: var(--text-color);
+    background-color: var(--main-bg-color);
+}
+
+.main {
+    flex: 50%;
+    background-color: var(--main-fg-color);
+    padding: 20px;
+    margin-top: 5px;
+}
+
+.navbar {
+    display: block;
+    overflow: hidden;
+    background-color: var(--navbar-color);
+}
+
+.navbar a {
+    float: right;
+    display: block;
+    color: var(--navbar-font-color);
+    text-align: center;
+    padding: 10px 10px;
+}
+
+.navbar a:hover {
+    background-color: var(--navbar-color-hover);
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+
+.side-left {
+    flex: 25%;
+    padding: 20px;
+}
+
+.side-right {
+    flex: 25%;
+    padding: 20px;
+}
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+    .row {
+        flex-direction: column;
+    }
+}
+  
+  /* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+  @media screen and (max-width: 400px) {
+    .navbar a {
+        float: none;
+        width: 100%;
+    }
+}
